@@ -67,7 +67,7 @@ export default {
             change: "cart/changeQuantity",
             remove: "cart/removeProduct"
         }),
-        handleQuantityChagne(line, $event) {
+        handleQuantityChange(line, $event) {
             this.change({ line, quantity:$event });
         }
     }

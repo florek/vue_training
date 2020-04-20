@@ -8,6 +8,18 @@ import "font-awesome/css/font-awesome.min.css";
 import store from "./store";
 import router from "./router";
 
+Vue.filter(
+    "currency",
+    (value) =>
+      new Intl.NumberFormat(
+        "pl-PL", 
+        {
+          style: "currency",
+          currency: "PLN"
+        }
+      ).format(value)
+);
+
 Vue.config.productionTip = false
 
 new Vue({
