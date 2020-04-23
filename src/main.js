@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import store from "./store";
 import router from "./router";
+import Vuelidate from "vuelidate";
+
 
 Vue.filter(
     "currency",
@@ -20,7 +22,7 @@ Vue.filter(
       ).format(value)
 );
 
-Vue.config.productionTip = false
+Vue.use(Vuelidate);
 
 new Vue({
   render: h => h(App),
